@@ -1,0 +1,63 @@
+#include <iostream>
+#include <Windows.h>
+#include <clocale>
+
+int main() {
+
+	setlocale(LC_CTYPE, "rus");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	std::string name;
+	int clas,age,ras;
+	std::cout << "Придумайте имя вышему персонажу:"; std::cin >> name; std::cout<<" "<<std::endl;
+	std::cout << "Из какой рассы для ваш персонаж:"<<std::endl;
+	std::cout << "1-Эльф   2-Гном   3-Человек   4-Орк"<< std::endl;
+	std::cout << "Выберите одну циыфру:" << std::endl;
+	std::cin >> ras;
+	std::cout << "Сколько лет вашему персонажу: ";
+	std::cin >> age;
+	std::cout << "К какому классу относиться ваш персонаж: " << std::endl;
+	std::cout << "1-Маг   2-Воин   3-Вор" << std::endl;
+	std::cout << "Выберите одну циыфру:" << std::endl;
+	std::cin >> clas;
+	std::cout << "*    *    *" << std::endl;
+	std::cout << "Имя вашего персонажа: "<< name << std::endl;
+	
+	if (ras == 1) {
+	std::cout << "Расса вышего персонажа: "<< "Эльф" << std::endl;
+
+	}
+	else if(ras == 2) {
+		std::cout << "Расса вышего персонажа: " << "Гном" << std::endl;
+
+	}
+	else if(ras == 3) {
+		std::cout << "Расса вышего персонажа: " << "Человек" << std::endl;
+
+	}
+	else if(ras == 4) {
+		std::cout << "Расса вышего персонажа: " << "Орк" << std::endl;
+
+	}
+	else {
+		std::cout << "Расса не известна" << std::endl;
+	}
+	std::cout << "Возраст вашего персонажа: " << age << std::endl;
+
+	if (clas == 1) {
+		std::cout << "Класс вашего персонажа: " << "Маг" << std::endl;
+
+	}
+	else if (clas == 2) {
+		std::cout << "Класс вашего персонажа: " << "Воин" << std::endl;
+
+	}
+	else if (clas == 3) {
+		std::cout << "Класс вашего персонажа: " << "Вор" << std::endl;
+
+	}
+	else {
+		std::cout << "Класс не известен";
+	}
+}
