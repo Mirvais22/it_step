@@ -1,0 +1,65 @@
+#include <iostream>
+#include <Windows.h>
+#include <clocale>
+#include <string>
+
+using namespace std;
+
+string codeword;
+string adminn_word = "Kukushka";
+string user_word = "operaciadelta1";
+string secret_word = "operaciavzlompentagona10011";
+
+void admin() {
+
+	string message = "Выполнен вход в сесетему. Вы ADMIN";
+	cout << message;
+
+}
+
+void user() {
+
+	string message1 = "Выполнен вход в сесетему. Вы простой пользователь";
+	cout << message1;
+	
+}
+
+void secret() {
+
+	string message2 = "Выполнен вход в сесетему. Вы СЕКРЕТНЫЙ АГЕНТ ФЕДЕРАЦИИ ЗЛА / (САФЗ)";
+	cout << message2;
+
+}
+
+void get_codeword() {
+
+	cout << "Введите кодовое слово:"; 
+	cin >> codeword;
+	cout << " " << endl;
+
+	if (codeword == adminn_word) {
+		admin();
+	}
+	else if (codeword == user_word) {
+		user();
+	}
+	else if (codeword == secret_word) {
+		secret();
+	}
+	else {
+		cout << "Кодовое слово введено не верно. ";
+		cout << "Попробуйте снова. " << endl;
+		cout << " " << endl;
+		get_codeword();
+	}
+
+}
+
+
+
+int main(){
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	get_codeword();
+}
