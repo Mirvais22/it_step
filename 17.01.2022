@@ -1,0 +1,45 @@
+#include <iostream>
+#include <Windows.h>
+#include <clocale>
+#include <string>
+
+using namespace std;
+
+int main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	//1
+
+	//int a = 0;
+	//cout <<"Введите число: ";
+	//cin>>a;
+	//for (int i = 0; i < 10;i++) {
+	//	cout << a << " * " << i << " = ";
+	//	cout << a * i << endl;
+	//}
+
+	//2
+
+	/*string a = "*";
+	for (int p = 0; p < 4; p++) {
+		for (int i = 0; i < 4; i++) {
+			cout << " " << a;
+		}
+		cout << endl;
+		for (int u = 0; u < 4; u++) {
+			cout << a << " ";
+		}
+		cout << endl;
+	}*/
+  
+  //2
+  
+  int arr[10];
+
+        // Заполняем массив с клавиатуры
+        for (int i = 0; i < 10; i++) {
+            cout << "[" << i + 1 << "]" << ": ";
+            cin >> arr[i];
+        }
+}
