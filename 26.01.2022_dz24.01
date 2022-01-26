@@ -1,0 +1,101 @@
+1)
+
+#include <iostream>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+void output(int* arr, int size) {
+	for (int i = 0; i < size;i++) {
+		cout << arr[i] <<' ';
+	}
+}
+
+int findMin(int* arr, int size) {
+	int min = arr[0];
+	int indexMin = 0;
+	for (int i = 0; i < size; i++) {
+		if (min > arr[i]) {
+			min = arr[i];
+			indexMin = i;
+		}
+	}
+
+	return indexMin;
+}
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	
+srand(time(0));
+	const int SIZE = 10;
+	int arr[SIZE];
+	int newArray[SIZE];
+	int minEL;
+	for (int i = 0; i < SIZE; i++) {
+	arr[i] = rand() % 1000;
+	}
+	output(arr, SIZE);
+
+	for (int i = 0; i < SIZE; i++) {
+		minEL = findMin(arr, SIZE);
+		newArray[i] = arr[minEL];
+		arr[minEL] = INT_MAX;
+		cout << endl;
+	}
+	cout << endl;
+	output(newArray, SIZE);
+	cout << endl;
+	cout << newArray[0] << " " << newArray[1];
+	
+}
+
+
+
+
+
+2)
+
+#include <iostream>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+void output(int* arr, int size) {
+	for (int i = 0; i < size; i++) {
+		cout << arr[i] << ' ';
+	}
+}
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	srand(time(0));
+	const int SIZE = 10;
+	int arr[SIZE];
+
+	for (int i = 0; i < SIZE; i++) {
+			arr[i] = rand() % 10;
+		}
+		output(arr, SIZE);
+		cout << endl;
+		int a = 0;
+		for (int i = 0; i < SIZE - 1; i++) {
+			bool flag = true;
+			for (int j = 0; j < SIZE; j++) {
+				if (arr[i]==arr[j] && i!=j){
+					flag = false;
+					break;
+				}
+			}
+			if (flag) {
+				cout << arr[i];
+			}
+		}
+}
