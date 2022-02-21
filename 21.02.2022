@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime> 
+using namespace std;
+
+
+int main() {
+	const int N = 6;
+
+	int X[N];
+	int Z[N];
+	int mas = 0;
+	for (int i = 0; i < N; i++) {
+		cin >> X[i];
+	}
+	cout << endl;
+	cout << N << endl;
+	for (int i = 0; i < N; i++) {
+		cout << X[i];
+	}
+	cout << endl;
+	for (int i = 0; i < N; i++) {
+		mas++;
+		Z[i] = mas;
+	}
+	for (int i = 0; i < N; i++) {
+			if (X[i] == Z[i]) {
+				cout << X[i]<<" ";
+		}
+	}
+}
