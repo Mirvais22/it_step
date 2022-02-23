@@ -1,0 +1,83 @@
+#include <iostream>
+#include <cstdlib>
+#include <Windows.h>
+using namespace std;
+
+enum SSP {
+	STONE = 1,
+	SCISSORS = 2,
+	PAPER = 3
+};
+
+int main() {
+	srand(time(NULL));
+	int r1 = 1;
+	// Суммы
+	size_t user{ 0 };
+	size_t first_bot{ 0 };
+	size_t second_bot{ 0 };
+	while (r1 == 1) {
+		// --- Начало игры ---
+		size_t user_input{ 0 };
+		cout << "Input (STONE = 1 or SCISSORS = 2 or PAPER = 3): ";
+		cin >> user_input;
+		// Проверить правильность ввода пользователем
+
+		if (user_input == 1 || user_input == 2 || user_input == 3) {
+
+		}
+		else {
+			cout << "invalid number";
+			return 0;
+		}
+
+
+		// Сгенерировать ход первого бота
+		Sleep(2000);
+		for (int i = 1; i < 4; i++) {
+			first_bot = 1 + rand() % 3;
+		}
+		cout << first_bot << endl;
+
+		// Сгенерировать ход второго бота
+		Sleep(2000);
+		for (int i = 1; i < 4; i++) {
+			second_bot = 1 + rand() % 3;
+		}
+		cout << second_bot << endl;
+		// Определить победителя и начислить сумму.
+		int usersum{ 0 }, firstbotsum{ 0 }, secondbotsum{ 0 };
+		if (user_input != first_bot && user_input != second_bot && first_bot == second_bot) {
+			usersum++;
+		}
+		else if (first_bot != user_input && first_bot != second_bot && user_input == second_bot) {
+			firstbotsum++;
+		}
+		else if (second_bot != user_input && second_bot != second_bot && user_input == first_bot) {
+			secondbotsum++;
+		}
+		else if (user_input == first_bot || user_input == second_bot || first_bot == second_bot) {
+			cout << "DRAW" << endl;
+		}
+		else {
+			cout << "CRASH" << endl;
+		}
+		cout << "You - {" << usersum << "};  First Bot - {" << firstbotsum << "};  Second Bot - {" << secondbotsum<<"} "<<endl<<endl<<endl;
+		// Начать игру заново.
+		cout << "restart: 1 " << endl;
+		cout << "end game: 0 " << endl;
+		int round = 0;
+		cin >> round;
+		if (round == 0) {
+			cout << "THE END";
+			return 0;
+		}
+		else if (round == 1) {
+			r1 = 1;
+		}
+		else {
+			cout << "error";
+			return 0;
+		}
+	}
+}
