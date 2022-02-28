@@ -1,0 +1,131 @@
+#include <iostream>
+#include <cstdio>
+#include <math.h>
+using namespace std;
+
+//1
+double f1(double x, double y){
+	int z = sqrt((x*x)+(y*y));
+	cout<<z <<endl;
+	return z;
+}
+
+//2
+double f2(double x1, double y1, double x2, double y2) {
+	if (x2 <= 0 || y2 <= 0) {
+		return -1;
+	}
+	int z1 = x2 - x1;
+	int z2 = y2 - y1;
+	cout << z1 << " " << z2<<endl;
+}
+
+//3
+int f3(int m2, int m1, int m0) {
+	if (m2 > 10 || m1 > 10 || m0 > 10) {
+		return -1;
+	}
+	cout << m2 << m1 << m0<<endl;
+}
+
+//4
+int f4(int m2 = 5, int m1 = 6, int m0 = 7) {
+	return m2 * 100 + m1 * 10 + m0;
+}
+
+//5
+int f5()
+{
+	return 345;
+}
+
+int f5(int x, int y)
+{
+	return x + y;
+}
+
+//6
+double f(double a1, double a2, double b = 0)
+{
+	b = a1 - a2;
+	return b;
+}
+
+//7
+void f(double& a, double& b, double c, double q)
+{
+	a = cos(q) * c;
+	b = sin(q) * c;
+}
+//8
+int a1, b1;
+int f8(int a = b1, int b = a1) {
+	a1 = b;
+	b1 = a;
+	cout << a1 << " " << b1<<endl;
+	return a,b;
+}
+
+//9
+int a2{ 2 }, b2{ 8 }, c2{ 0 };
+int f9(int& a, int& b, int& c) {
+	
+	a2 = b;
+	cout << a2;
+	a2 = 2;
+
+	b2 = c;
+	cout << b2;
+	b2 = 9;
+
+	c2 = a;
+	cout << a2;
+	c2 = 0;
+	cout<<endl;
+	return a, b, c;
+}
+
+//10
+
+int f10(int& a, int& b, int& x, int& y) {
+	cout << a << " " << b << endl;
+	return a, b, x, y;
+}
+
+int main() {
+	//1
+	f1(3,4);
+	//2
+	f2(1, 2, 6, 8);
+	//3
+	f3(4, 6, 1);
+	//4
+	int x1 = 3;
+	int x = f4(2+x1, 3+x1, 4 + x1);
+	cout << x << endl;
+	//5
+	int m = 0;
+	m = f5();
+	cout << m <<endl;
+	//6
+	int u{ 0 }, s1{ 3 }, s2{ 4 };
+	double v{ 10 }, d1{ 20.5 }, d2{ 10.5 };
+	u = f(s1, s2);
+	v = f(d1, d2, v);
+	cout << u << std::endl;
+	cout << v << std::endl;
+	//7
+	double a3{ 0 }, b3{ 0 }, c3{ 33 }, q3{ 45 };
+	f(a3, b3, c3, q3);
+	cout << a3 <<endl;
+	cout << b3 <<endl;
+	//8
+	f8(7,8);
+	//9
+	f9(a2, b2, c2);
+	//10
+	int x2{ 23 }, y{ 4 };
+	int a = x2 * y;
+	int b = x2 / y;
+	f10(a,b,x2,y);
+}
