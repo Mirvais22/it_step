@@ -1,0 +1,76 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	//1
+	/*int a{ 3 }, b{ 4 };
+	int* x{ &a };
+	int* y{ &b };
+	int s = *x + *y;
+	cout << s<<endl;
+	cout << &s;*/
+
+	//2
+	/*int a{ 2 }, b{ 5 };
+	int* p1{ &a }, * p2{ &b };
+	*p1 = 10;
+	cout << *p1 - *p2;*/
+
+	//3
+	/*double a{ 2.5 }, b{ 5.2 }, res;
+	double* p1{ &a },* p2{ &b };
+	res = *p1 - *p2;
+	cout << res;*/
+
+	//4
+	//const int SIZE{ 10 };
+	//int A[SIZE]{ 1,2,3,4,5,6,7,8,9,10 };
+	//int* p = A;
+	//for (int i = 0; i < SIZE; i++) {
+	//	cout << (*A)++;
+	//}
+
+	//5
+	srand(time(NULL));
+	/*int arr[5];
+	int r;
+	int* p1 = &r;
+	for (int i = 0; i < 5; i++) {
+		r = rand() % 10;
+		arr[i] = *p1;
+		cout << arr[i];
+	}*/
+
+	//6
+	/*int arr[5]{ 1,2,-3,4,5 };
+	int N = arr[0];
+	int* p1 = &N;
+	for (int i = 0; i < 5; i++) {
+		if (arr[i] < 0) {
+			N = arr[i];
+			cout << i + 1 << ":  ";
+		}
+	}
+	cout << *p1;*/
+
+	//7
+	/*int arr[16];
+	for (int i = 0; i < 16; i++) {
+		arr[i] = rand() % 100;
+		cout << arr[i] << " ";
+	}
+	int min = arr[0];
+	int* p1 = &min;
+	
+	cout << endl;
+	for (int i = 0; i < 16; i++) {
+		if (arr[i] < min) {
+			min = arr[i];
+		}
+	}
+	cout<< "MIN: " << *p1;*/
+
+
+}
