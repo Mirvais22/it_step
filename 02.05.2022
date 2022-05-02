@@ -1,0 +1,115 @@
+#pragma once
+class MyDate
+{
+public:
+	MyDate();
+	MyDate(int d = 0, int m = 0, int y = 0);
+
+	bool operator<(const MyDate& obj);
+	bool operator+(const MyDate& obj);
+	bool operator-(const MyDate& obj);
+	bool operator+=(const MyDate& obj);
+
+	void DateinSec(int day, int month, int year);
+	void DateNow();
+
+	int getDay() const;
+	int getMonth() const;
+	int getYear() const;
+
+	void setDay(int day);
+	void setMonth(int month);
+	void setYear(int year);
+
+	int show();
+private:
+	long long second;
+	int day;
+	int month;
+	int year;
+};
+
+
+//h.cpp
+#include <iostream>
+#include <ctime>
+#include "Date.h"
+
+MyDate::MyDate()
+{
+    second = 0;
+    day = 0;
+    month = 0;
+    year = 0;
+}
+
+bool MyDate::operator<(const MyDate& obj)
+{
+	return this->second < obj.second;
+}
+
+bool MyDate::operator-(const MyDate& obj)
+{
+    return this->second - obj.second;
+}
+
+void MyDate::DateinSec(int day, int month, int year)
+{
+    size_t tmp1 = this->day * 86400;
+    size_t tmp2 = this->month * 2592000;
+    size_t tmp3 = this->year * 31536000;
+    this->second = (tmp1 + tmp2 + tmp3);
+}
+
+void MyDate::DateNow()
+{
+    // current date/time based on current system
+    time_t now = time(0);
+
+    //// convert now to string form
+    //char* dt = ctime(&now);
+
+    //std::cout << "The local date and time is: " << dt <<std::endl;
+}
+
+MyDate::MyDate(int d, int m, int y)
+{
+    setDay(d);
+    setMonth(m);
+    setYear(y);
+}
+
+int MyDate::getDay() const
+{
+    return day;
+}
+
+int MyDate::getMonth() const
+{
+    return month;
+}
+
+int MyDate::getYear() const
+{
+    return year;
+}
+
+void MyDate::setDay(int day)
+{
+    this->day = day;
+}
+
+void MyDate::setMonth(int month)
+{
+    this->month = month;
+}
+
+void MyDate::setYear(int year)
+{
+    this->year = year;
+}
+
+int MyDate::show()
+{
+    return (this->second/31536000)/(this->second/ 2592000)/(this->second / 86400);
+}
