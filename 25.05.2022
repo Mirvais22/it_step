@@ -1,0 +1,126 @@
+#include<iostream>
+using namespace std;
+
+template<typename T>
+struct node {
+	T key;
+	node* left, * right;
+	node();
+};
+
+template<typename T>
+class tree {
+	node<T>* root;
+public:
+	tree():root(nullptr) {}
+	void push(const T& val);
+	void show();
+private:
+	void push(node<T>* ptr, const T& val);
+	void show(node<T>* ptr);
+};
+
+template<typename T>
+inline void tree<T>::push(const T& val)
+{
+	if (root != NULL)
+		push(root, val);
+	else
+	{
+		root = new node<T>();
+		root->key = val;
+		root->left = NULL;
+		root->right = NULL;
+	}
+}
+
+template<typename T>
+inline void tree<T>::show()
+{
+	if (root->left == nullptr)
+		cout<<" no data ";
+	else
+		show(root);
+	if (root->right == nullptr)
+		cout<<" no data ";
+	else
+		show(root);
+}
+
+template<typename T>
+inline void tree<T>::push(node<T>* ptr, const T& val)
+{
+	{
+		if (val < ptr->key)
+		{
+			if (ptr->left != NULL)
+				push(ptr->left,val);
+			else
+			{
+				ptr->left = new node<T>();
+				ptr->left->key = val;
+			}
+		}
+		else
+			if (val > ptr->key)
+			{
+				if (ptr->right != NULL)
+					push(ptr->right,val);
+				else
+				{
+					ptr->right = new node<T>();
+					ptr->right->key = val;
+				}
+			}
+	}
+}
+
+template<typename T>
+inline void tree<T>::show(node<T>* ptr)
+{
+	if (ptr->left != nullptr)
+	{
+		show(ptr->left);
+	}
+	if (ptr->left == nullptr)
+	{
+		cout << ptr->key << " ";
+	}
+
+	if (ptr->right != nullptr)
+	{
+		show(ptr->right);
+	}
+
+}
+
+template<typename T>
+inline node<T>::node()
+{
+	left = nullptr;
+	right = nullptr;
+}
+
+
+
+//cpp
+
+#include <iostream>
+#include "tree.h"
+using namespace std;
+
+int main()
+{
+	tree<int> a;
+	a.push(45);
+	a.push(30);
+	a.push(50);
+	a.push(27);
+	a.push(39);
+	a.push(15);
+	a.push(90);
+	a.push(103);
+	a.push(70);
+
+	a.show();
+}
