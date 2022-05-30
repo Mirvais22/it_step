@@ -1,0 +1,51 @@
+//h
+#pragma once
+#include<iostream>
+#include<string>
+using namespace std;
+
+class prepod
+{
+	std::string name;
+	std::string predmet;
+public:
+	prepod(const char* nm, const char* pr);
+	std::string get_name();
+	std::string get_predmet();
+	bool equal(const prepod prep);
+	friend std::ostream& operator<<(std::ostream& os, const prepod& prep);
+};
+
+
+
+//cpp
+
+#include "prepod.h"
+using namespace std;
+
+prepod::prepod(const char* nm, const char* pr)
+{
+	name = nm;
+	predmet = pr;
+}
+
+std::string prepod::get_name()
+{
+	return name;
+}
+
+std::string prepod::get_predmet()
+{
+	return predmet;
+}
+
+bool prepod::equal(const prepod prep)
+{
+	return name == prep.name && predmet == prep.predmet;
+}
+
+std::ostream& operator<<(std::ostream& os, const prepod& prep)
+{
+	os << "<" << prep.name << "> - <" << prep.predmet << ">";
+	return os;
+}

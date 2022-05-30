@@ -1,0 +1,50 @@
+//h
+
+#pragma once
+#include <iostream>
+#include<string>
+
+using namespace std;
+
+class student
+{
+	string FullName;
+public:
+	student(const char* nm);
+	string get_name();
+	bool equal(const student nam);
+	friend std::ostream& operator<<(std::ostream& os, const student& nam);
+};
+
+
+
+
+
+
+
+
+//cpp
+
+#include "student.h"
+using namespace std;
+
+student::student(const char* nm)
+{
+	FullName = nm;
+}
+
+std::string student::get_name()
+{
+	return FullName;
+}
+
+bool student::equal(const student nam)
+{
+	return FullName == nam.FullName;
+}
+
+std::ostream& operator<<(std::ostream& os, const student& nam)
+{
+	os << "<" << nam.FullName << ">";
+	return os;
+}

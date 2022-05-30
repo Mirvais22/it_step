@@ -1,0 +1,63 @@
+//h
+
+#pragma once
+#include<iostream>
+#include<vector>
+#include "prepod.h"
+#include "student.h"
+
+class group
+{
+	std::vector<student> students;
+	std::vector<prepod> prepods;
+public:	void add_Student(student nam);
+	void remove_Student(student nam);
+	void add_Prepod(prepod nam, prepod predm);
+	void remove_Prepod(prepod nam, prepod predm);
+	friend std::ostream& operator<<(std::ostream& os, const group grup);
+};
+
+
+//cpp
+
+#include "group.h"
+using namespace std;
+
+void group::add_Student(student nam)
+{
+	students.push_back(nam);
+}
+
+void group::remove_Student(student nam)
+{
+	auto size = students.size();
+	std::vector<student> vs;
+	for (auto i = 0; i < size; i++)
+		if (!students[i].equal(nam))
+			vs.push_back(students[i]);
+	students = vs;
+}
+
+void group::add_Prepod(prepod nam, prepod predm)
+{
+	prepods.push_back(nam);
+	prepods.push_back(predm);
+}
+
+void group::remove_Prepod(prepod nam, prepod predm)
+{
+	auto size = prepods.size();
+	std::vector<prepod> vs;
+	for (auto i = 0; i < size; i++)
+		if (!prepods[i].equal(nam))
+			vs.push_back(prepods[i]);
+	prepods = vs;
+}
+
+std::ostream& operator<<(std::ostream& os, const group grup)
+{
+	auto size = grup.students.size();
+	for (auto i = 0; i < size; i++)
+		os << grup.students[i]<< grup.prepods[i] << std::endl;
+	return os;
+}
