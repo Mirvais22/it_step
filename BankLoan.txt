@@ -1,0 +1,25 @@
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
+class BankLoan
+{
+	string timeW;
+	double sum;
+	double timec;
+	size_t percent;
+public:
+	BankLoan(){}
+	BankLoan(const string tmw, const double sm, const size_t tm, const size_t prcnt)
+	{
+		timeW = tmw;
+		sum = sm;
+		timec = tm;
+		percent = prcnt;
+	}
+	double creditSZ()
+	{
+		return this->sum;
+	}
+};

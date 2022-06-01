@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person
+{
+	string surname;
+	string name;
+	string patronymic;
+public:
+	Person(){}
+	Person(string sn, string nm, string patr)
+	{
+		surname = sn;
+		name = nm;
+		patronymic = patr;
+	}
+};
