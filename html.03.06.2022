@@ -1,0 +1,445 @@
+<!--!>html<!-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+<div class="cont flex_box">
+
+<div class="icons flex_box">
+<div><i class="fa-brands fa-facebook-f"></i></div>	
+<div><i class="fa-brands fa-twitter"></i></div>
+<div><i class="fa-brands fa-google-plus-g"></i></div>
+<div><i class="fa-brands fa-dribbble"></i></div>
+<div><i class="fa-brands fa-linkedin-in"></i></div>
+</div>
+
+<div class="logo">
+<a href="https://demo.themeum.com/html/triangle/multicolor/index.html">
+<img src="img/logo.png">
+</a>
+</div>
+<!--!><!-->
+<div class="menu">
+<ul class="nav flex_box">
+<li><a href="#">HOME</a></li>
+<li><a href="#">PAGES</a></li>
+<li><a href="#">BLOG</a></li>
+<li><a href="#">PORTFOLIO</a></li>
+<li><a href="#">SHORTCODES</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="slider">
+<div class="cont flex_box">
+<div class="text-l">
+<h1>We Are Creative Nerds</h1>
+<p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+<div class="sing">sing up</div>
+</div>
+
+<div class="img-r">
+<img src="img/hill.png" class="hill"/>
+<img src="img/sun.png" class="sun"/>
+<img src="img/house.png" class="house"/>
+<img src="img/birds1.png" class="birds1"/>
+<img src="img/birds2.png" class="birds2"/>
+</div>
+
+</div>
+</div>
+</div>
+<div class="free">
+<div class="cont flex_box">
+<div class="div1">
+<img src="img/icon1.png">
+<h2>Incredibly Responsive</h2>
+<p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
+</div>
+
+<div class="div1">
+<img src="img/icon2.png">
+<h2>Superior Typography</h2>
+<p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
+</div>
+
+<div class="div1">
+<img src="img/icon3.png">
+<h2>Swift Page Builder</h2>
+<p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="frog">
+<div class="cont">
+
+<div class="fil ">
+<div class="imag b">
+<img src="img/image1.png">
+</div>
+<div class="text">
+<h2>Experienced and Enthusiastic</h2>
+<p>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</p>
+</div>
+</div>	
+
+<div class="fil">
+
+<div class="imag">
+<h2>Built for the Responsive Web</h2>
+<p>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</p>
+</div>
+<div class="text right">
+<img src="img/image2.png">
+</div></div>	
+
+<div class="fil">
+<div class="imag">
+<img src="img/image3.png">
+</div>
+<div class="text">
+<h2>Experienced and Enthusiastic</h2>
+<p>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</p>
+</div>
+</div>	
+
+</div>
+</div>
+
+<div class="koleso">
+<div class="cont">
+<div class="centr">
+<img src="img/clients.png">
+</div>
+<div class="centr">
+<h2>Happy Clients</h2>
+<p>
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud
+</p>
+</div>
+
+<div class="lastimg">
+	<div>
+<img src="img/client1.png">
+</div>
+
+<div>
+<img src="img/client2.png">
+</div>
+
+<div>
+<img src="img/client3.png">
+</div>
+
+<div>
+<img src="img/client4.png">
+</div>
+
+<div>
+<img src="img/client5.png">
+</div>
+
+<div>
+<img src="img/client6.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="bottom">
+<div class="cont">
+<div class="flex_box">
+<div class="box1">
+<img src="img/icon1.png">
+<h2>Incredibly Responsive</h2>
+<p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
+</div>
+
+<div class="box1">
+<img src="img/icon2.png">
+<h2>Superior Typography</h2>
+<p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
+</div>
+
+<div class="box1">
+<img src="img/icon3.png">
+<h2>Swift Page Builder</h2>
+<p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+<!--!>css<!-->
+
+
+.cont
+{
+	width: 1170px;
+	margin: 0px auto;
+}
+
+.sing
+{
+	color: #0099ae;
+	padding:  10px 25px; 
+	width: 80px;
+	border-radius: 4px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.sing:hover
+{
+	color: #01707f;
+    border-color: #01707f;
+}
+
+.text-l
+{
+	align-self: center;
+}
+
+.div1
+{
+	flex-basis: 30%;
+	text-align: center;
+	transition:all 2s linear 0s; 
+	
+}
+
+.div1:nth-child(1){animation: box 1s 300ms both;}
+.div1:nth-child(2){animation: box 1s 600ms both;}
+.div1:nth-child(3){animation: box 1s 900ms both;}
+
+.div1:nth-child(1) img{animation: sun 0.5s 300ms both;}
+.div1:nth-child(2) img{animation: sun 0.5s 600ms both;}
+.div1:nth-child(3) img{animation: sun 0.5s 900ms both;}
+
+
+
+
+.div1:hover
+{
+	transform: scale(1.2);
+}
+
+.div1 img
+{
+	height: 75px;
+	padding: 40px 0px;		
+	transition-property: height;
+	transition-duration: 0.5s;
+	transition: height 2s linear; 
+	animation: sun 0.5s 200ms both;
+}
+
+.div1 img:hover
+{
+	height: 90px;
+}
+
+.slider
+{
+	background-image: url(img/slider-bg.png);
+	background-repeat: repeat-x; 
+	background-position: 0px 93%;
+}
+
+ul.nav li
+{
+	list-style: none;
+	margin: 0px 15px;
+}
+
+.inline-b
+{
+display: inline-block;
+}
+
+.menu
+{
+ 	vertical-align: top;
+ 	padding: 20px 0px;
+ 	width: 80%;
+ 	text-align: right;
+}
+
+ul.nav
+{
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	padding-inline-start: 0px;
+
+}
+
+.nav a:link{color:#000;}
+.nav a:active{text-shadow: 0px 0px 10px #595959;}	
+.nav a:hover{color: #00aeef;}
+.nav a{text-decoration: none;}
+
+ul.nav li:first-child:before{content: "\/";background-color: lightgreen;}
+
+body
+{
+	filter:drop-shadow(0px 0px 0px blue) grayscale(0%) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+
+}
+
+@keyframes hill
+{
+	0%{transform:translate(0px,-1000px);}
+	100%{transform: translate(0px,0px);}
+}
+
+img .hill
+{
+	animation: hill 1s ease-in-out 200ms both;
+}
+.imag
+{
+	width: 40%;
+	animation:birds1 500ms ease-in-out 1200ms both;
+}
+.text
+{
+	width: 50%;
+	animation:birds2 500ms ease-in-out 1200ms both;
+}
+.koleso
+{
+	text-align: center;
+}
+.lastimg div
+{
+	display: inline-block;
+    margin: 0px 28px;
+}
+.fil
+{
+	display: flex;
+	align-items: center;
+}
+.sun, .house, .birds1, .birds2
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.img-r
+{
+	position: relative;
+}
+
+.sun
+{
+	z-index: 1;
+	top: 175px;
+	left: 170px;
+	animation:sun 0.5s 1s both;
+}
+.house
+{
+	top: 200px;
+	left: 120px;
+	animation: house 500ms ease-in-out 800ms both;
+}
+.birds1
+{
+	top: 205px;
+	left: 11px;
+	animation:birds1 500ms ease-in-out 1200ms both;
+}
+.birds2
+{
+	top: 155px;
+	left: 500px;
+	animation:birds2 500ms ease-in-out 1200ms both;
+}
+
+@keyframes sun 
+{
+	0%{opacity: 0; transform: scale(0);}
+}
+@keyframes house
+{
+	0%{opacity: 0;transform: translateY(-2000px);}
+	60%{transform: translateY(30px);}
+	80%{transform: translateY(-10px);}
+}
+@keyframes birds1
+{
+	0%{opacity: 0; transform: translateX(-20);}
+}
+@keyframes birds2 
+{
+	0%{opacity: 0; transform:translateX(20px);}
+}
+
+.fil div
+{
+	vertical-align: middle;
+}
+
+.right
+{
+	text-align: right;
+	justify-content: flex-end;
+}
+
+@keyframes box 
+{
+	0%{opacity: 0;}
+}
+
+.box1 
+{
+	text-align: center;
+	transition: all 0.5s linear 0s;
+}
+.flex_box
+{
+	display: flex;
+}
+
+.icons{justify-content: flex-end;flex-basis: 100%;}
+.icons div {flex-basis: 2%;}
+.icons i {font-size: 18px; color: #d3d3d3;cursor: pointer;}
+.icons div:nth-child(2) i:hover{color: #2aa7dc;}
+.icons div:nth-child(1) i:hover{color: #0884d5;}
+.icons div:nth-child(3) i:hover{color: #a22523;}
+.icons div:nth-child(4) i:hover{color: #e94989;}
+.icons div:nth-child(5) i:hover{color: #006dc0;}
+
+.header .flex_box
+{
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.slider .flex_box
+{
+	align-items: center;
+}
+
+.free .flex_box
+{
+	justify-content: flex-end;
+}
+.koleso p{padding: 0px 31%;}
