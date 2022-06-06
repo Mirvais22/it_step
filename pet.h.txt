@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+
+class pet 
+{
+	int age;
+public:
+	pet() :age(0) {}
+	pet(int ag)
+	{
+		age = ag;
+	}
+	int getAge()
+	{
+		return age;
+	}
+	virtual ~pet (){}
+
+};

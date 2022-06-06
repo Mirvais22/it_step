@@ -1,0 +1,50 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include "pch.h"
+#include "pet.h"
+
+
+class dog : pet
+{
+	std::string name;
+	int breed;
+	
+	std::string Type()
+	{
+		switch (breed)
+		{
+		case bulldog:return ENUM_TO_STR(bulldog);
+		case golden_retriever:return ENUM_TO_STR(golden_retriever);
+		case doberman:return ENUM_TO_STR(doberman);
+		}
+		return std::string();
+	}
+protected:
+	const std::string family = "Dog";
+	const std::string sund = "woof-woof";
+public:
+	enum{ bulldog, golden_retriever, doberman};
+	dog() :pet()
+	{
+		breed = 0;
+	}
+	dog(int bred,std::string nam)
+	{
+		name = nam;
+		breed = bred;
+	}
+	std::string Show()
+	{
+		return name;
+	}
+	std::string Sound()
+	{
+		return sund;
+	}
+	virtual void returnALL()
+	{ 
+		std::cout << "Family: " << family << "  Breed: " << Type() << "  Nicname:" << Show() << "  Age: " <<getAge();
+	}
+	virtual ~dog(){}
+};
