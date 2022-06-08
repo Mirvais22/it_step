@@ -1,0 +1,83 @@
+//h1
+#pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+#include "heapDAT.h"
+using namespace std;
+
+class hdatas : hdata
+{
+	vector<hdata> _hdatas;
+public:
+	hdatas(){}
+	void add_record(hdata obj);
+	void give_the_total_cost()
+	{
+		size_t sum = 0;
+		for (int i = 0; i < _hdatas.size(); i++)
+		{
+			sum += _hdatas[i].get_cost();
+		}
+		cout << sum;
+	}
+	void show();
+};
+//h2
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
+class hdata
+{
+private:
+	size_t Prod_num;
+	string Prod_name;
+	size_t col_vo;
+	double price_of_1;
+	double cost;
+public:
+	hdata()
+	{
+		size_t Prod_num = 0;
+		size_t col_vo = 0;
+		double price_of_1 = 0;
+		double cost = 0;
+	}
+	hdata(string str)
+	{
+		
+	}
+	size_t get_Prod_num() { return Prod_num; }
+	string get_Prod_name() { return Prod_name; }
+	size_t get_col_vo() { return col_vo; }
+	double get_price_of_1() { return price_of_1; }
+	double get_cost() { return cost; }
+};
+//cpp
+#include <iostream>
+#include <string>
+#include <vector>
+#include "hdatas.h"
+#include "heapDAT.h"
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	hdatas stock;
+	ifstream ifs("heap.dat", ios::in);
+	if (!ifs.bad())
+	{
+		char buffer[255];
+		while (!ifs.eof())
+		{
+			ifs.getline(buffer, 255);
+			stock.add_record(hdata(buffer));
+		}
+		ifs.close();
+	}
+
+	stock.give_the_total_cost();
+}
